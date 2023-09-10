@@ -2,6 +2,7 @@ package test
 
 import (
 	"Golculator/src/calculator"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
@@ -14,9 +15,8 @@ func TestCalculator(t *testing.T) {
 		result := calculator.Sum(a, b)
 
 		expected := 10
-		if result != expected {
-			t.Errorf("Expected %d instead of %d as result", expected, result)
-		}
+
+		assert.Equal(t, expected, result)
 	})
 
 	t.Run("Sub", func(t *testing.T) {
@@ -24,9 +24,8 @@ func TestCalculator(t *testing.T) {
 		result := calculator.Sub(a, b)
 
 		expected := 0
-		if result != expected {
-			t.Errorf("Expected %d instead of %d as result", expected, result)
-		}
+
+		assert.Equal(t, expected, result)
 	})
 
 	t.Run("Multi", func(t *testing.T) {
@@ -34,9 +33,8 @@ func TestCalculator(t *testing.T) {
 		result := calculator.Multi(a, b)
 
 		expected := 25
-		if result != expected {
-			t.Errorf("Expected %d instead of %d as result", expected, result)
-		}
+
+		assert.Equal(t, expected, result)
 	})
 
 	t.Run("Div", func(t *testing.T) {
@@ -44,8 +42,7 @@ func TestCalculator(t *testing.T) {
 		result := calculator.Div(a, b)
 
 		expected := 1
-		if result != expected {
-			t.Errorf("Expected %d instead of %d as result", expected, result)
-		}
+
+		assert.Equal(t, expected, result)
 	})
 }
