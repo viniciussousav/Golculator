@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Golculator/calculator"
+	"Golculator/src/calculator"
 	"bufio"
 	"fmt"
 	"os"
